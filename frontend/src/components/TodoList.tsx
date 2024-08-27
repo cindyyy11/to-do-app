@@ -1,18 +1,19 @@
-import List from '@mui/material/List';
-import { useState, useEffect } from 'react';
-import TodoItem from './TodoItem';
-import TodoForm from './TodoForm';
-import { Box, Typography, createTheme, ThemeProvider } from '@mui/material';
-import FilterBtn from './FilterBtn';
+import List from "@mui/material/List";
+import { useState, useEffect } from "react";
+import TodoItem from "./TodoItem";
+import TodoForm from "./TodoForm";
+import { Box, Typography, createTheme, ThemeProvider } from "@mui/material";
+import FilterBtn from "./FilterBtn";
+import axios from "axios";
 
 const theme = createTheme({
     typography: {
         fontFamily: [
             'Montserrat',
             'sans-serif',
-        ].join(','),
+        ].join(","),
     },
-});
+}); 
 
 const styles = {
     display: 'flex',
@@ -35,7 +36,7 @@ const styles = {
 
 interface Todo {
     id: string;
-    text: string;
+    title: string;
     completed: boolean;
 }
 
@@ -47,13 +48,9 @@ const FILTER_MAP: { [key: string]: (todo: Todo) => boolean } = {
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
-interface TodoListProps {
-    tasks: Todo[];
-}
-
-export default function TodoList({ tasks }: TodoListProps): JSX.Element {
-    const [todos, setTodos] = useState<Todo[]>(tasks);
-    const [filter, setFilter] = useState<string>('All');
+export default function TodoList(): JSX.Element {
+	const [todos, setTodos] = useState<Todo[]>([]);
+	const [filter, setFilter] = useState<string>("All");
 
     const filterList = FILTER_NAMES.map((name) => (
         <FilterBtn 
@@ -65,13 +62,14 @@ export default function TodoList({ tasks }: TodoListProps): JSX.Element {
     ));
 
     useEffect(() => {
-        setTodos(tasks); 
-    }, [tasks]);
-
-    useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify(todos));
-    }, [todos]);
-
+		axios
+			.get("http://localhost:8000/api/task-list/")
+			.then((res) => {
+				setTodos(res.data);
+			})
+			.catch((err) => console.log(err));
+	}, []);
+    
     const removeTodo = (id: number | string): void => {
         setTodos((prevTodos) => prevTodos.filter((t) => t.id !== id));
     };
@@ -88,10 +86,10 @@ export default function TodoList({ tasks }: TodoListProps): JSX.Element {
         });
     };
 
-    const addTodo = (text: string): void => {
+    const addTodo = (todo: Todo): void => {
         setTodos((prevTodos) => [
             ...prevTodos,
-            { text, id: crypto.randomUUID(), completed: false }
+            {title: todo.title, id: todo.id, completed: false },
         ]);
     };
 
@@ -127,7 +125,7 @@ export default function TodoList({ tasks }: TodoListProps): JSX.Element {
                             textAlign: 'center'
                         }}    
                     >
-                        what&apos;s on the docket for today? 
+                        what is your TASK today :0? 
                     </Typography>
                     <TodoForm addTodo={addTodo} />
                     {taskList}
