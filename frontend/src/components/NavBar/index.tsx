@@ -36,19 +36,19 @@ const Navbar = () => {
           cursor: "pointer",
         }}
       >
-        <AccountCircle sx={{ color: "#fb923c", width: 28, height: 28 }} />
+        <AccountCircle sx={{ color: "#f7bd03", width: 28, height: 28 }} />
         <Box
           component="span"
           sx={{
-            color: "#fb923c",
-            fontWeight: "bold", //bold can't work 
+            color: "#f7bd03",
+            fontWeight: 700,
             fontSize: { md: "1rem", xs: "0.875rem" },
             whiteSpace: "nowrap",
           }}
         >
           Board Name
         </Box>
-        <ExpandMore sx={{ color: "#fb923c", width: 16, height: 16 }} />
+        <ExpandMore sx={{ color: "#f7bd03", width: 16, height: 16 }} />
       </Box>
       <Box
         sx={{
@@ -84,7 +84,7 @@ const Navbar = () => {
           sx={{
             display: "grid",
             placeItems: "center",
-            bgcolor: "f3f4f6",
+            bgcolor: "#f3f4f6",
             borderRadius: "50%",
             p: 1,
             cursor: "pointer",
@@ -96,7 +96,7 @@ const Navbar = () => {
           sx={{
             display: "grid",
             placeItems: "center",
-            bgcolor: "f3f4f6",
+            bgcolor: "#f3f4f6",
             borderRadius: "50%",
             p: 1,
             cursor: "pointer",
@@ -108,7 +108,7 @@ const Navbar = () => {
           sx={{
             display: "grid",
             placeItems: "center",
-            bgcolor: "f3f4f6",
+            bgcolor: "#f3f4f6",
             borderRadius: "50%",
             p: 1,
             cursor: "pointer",

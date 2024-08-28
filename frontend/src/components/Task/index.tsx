@@ -3,7 +3,7 @@ import { AccessTime } from "@mui/icons-material";
 import { Box, Card, CardContent, Typography, Chip, Divider } from "@mui/material";
 import { TaskT } from "../../types";
 
-interface TaskProps {
+interface TaskProps {    
 	task: TaskT;
 	provided: any;
 }
@@ -53,7 +53,7 @@ const Task = ({ task, provided }: TaskProps) => {
 								bgcolor: tag.bg,
 								color: tag.text,
 								fontSize: 13,
-								fontWeight: "medium",
+								fontWeight: 500,
 							}}
 							size="small"
 						/>

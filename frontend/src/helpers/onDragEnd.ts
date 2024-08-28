@@ -3,7 +3,7 @@ export const onDragEnd = (result: any, columns: any, setColumns: any) => {
 	if (!result.destination) return;
 
 	const { source, destination } = result;
-
+    
 	if (source.droppableId !== destination.droppableId) {
 		const sourceColumn = columns[source.droppableId];
 		const destColumn = columns[destination.droppableId];
@@ -13,7 +13,7 @@ export const onDragEnd = (result: any, columns: any, setColumns: any) => {
 		destItems.splice(destination.index, 0, removed);
 		setColumns({
 			...columns,
-			[source.droppableId]: {
+			[source.droppableId]: {     
 				...sourceColumn,
 				items: sourceItems,
 			},

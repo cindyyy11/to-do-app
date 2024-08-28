@@ -79,23 +79,13 @@ const Sidebar = () => {
 				<Typography
 					variant="h6"
 					sx={{
-						color: "#fb923c",
+						color: "#f7bd03",
 						fontWeight
-            : "bold",  //bold can't work
+            : 700,  
 						display: { md: "block", xs: "none" },
 					}}
 				>
 					ToDoApp :0
-				</Typography>
-				<Typography
-					variant="h6"
-					sx={{
-						color: "#fb923c",
-						fontWeight: "bold",   //bold can't work
-						display: { md: "none", xs: "block" },
-					}}
-				>
-					L.
 				</Typography>
 			</Box>
 			<Box
@@ -118,12 +108,12 @@ const Sidebar = () => {
 							gap: 2,
 							width: "100%",
 							borderRadius: 1,
-							bgcolor: link.active ? "#fb923c" : "transparent",
+							bgcolor: link.active ? "#f7bd03" : "transparent",
 							cursor: "pointer",
 							px: 2,
 							py: 1,
 							"&:hover": {
-								bgcolor: "#fb923c",
+								bgcolor: "#f7bd03",
 							},
 						}}
 					>
@@ -131,7 +121,7 @@ const Sidebar = () => {
 						<Typography
 							sx={{
 								fontSize: "15px",
-								fontWeight: "medium",
+								fontWeight: 500,
 								display: { md: "block", xs: "none" },
 							}}
 						>
@@ -154,7 +144,7 @@ const Sidebar = () => {
 						px: 2,
 						py: 1,
 						"&:hover": {
-							bgcolor: "#fb923c",
+							bgcolor: "#f7bd03",
 						},
 					}}
 				>
@@ -162,7 +152,7 @@ const Sidebar = () => {
 					<Typography
 						sx={{
 							fontSize: "15px",
-							fontWeight: "medium",
+							fontWeight: 500,
 							display: { md: "block", xs: "none" },
 						}}
 					>
