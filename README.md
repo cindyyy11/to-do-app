@@ -30,5 +30,13 @@ To get started, clone the repository and install dependencies.
 ```bash
 git clone https://github.com/yourusername/to-do-app.git
 cd to-do-app
+```
+
+### Clone a Single Branch
+
+To download a specific branch without downloading the entire repository:
+
+```bash
+git clone --branch <branch-name> --single-branch <repository-url>
 
 
