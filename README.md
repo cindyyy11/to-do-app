@@ -11,9 +11,12 @@ A simple to-do application to help users organize tasks. There are two versions 
 - **Task Completion**: Mark tasks as complete and move them to the "Done" column.
 
 ### Version without Kanban (Main Branch)
+![image](https://github.com/user-attachments/assets/5a08a0dc-15a5-4a85-a954-34496b7947f7)
 - **Basic Task List**: A simpler to-do list view with task creation and completion functionality.
 - **Task Management**: Add, edit, and delete tasks.
 - **Task Completion**: Mark tasks as completed with a checkbox.
+ 
+
 
 ## Installation
 
