@@ -5,6 +5,8 @@ A simple to-do application to help users organize tasks. There are two versions 
 ## Features
 
 ### Version with Kanban (Kanban Branch)
+![image](https://github.com/user-attachments/assets/1917b375-5684-4ba0-8f78-974b34c39f26)
+
 - **Kanban Board**: Organize tasks into columns such as *To-Do*, *In Progress*, and *Done*.
 - **Drag and Drop**: Move tasks between different columns.
 - **Task Management**: Add, edit, and delete tasks within each column.
@@ -12,6 +14,7 @@ A simple to-do application to help users organize tasks. There are two versions 
 
 ### Version without Kanban (Main Branch)
 ![image](https://github.com/user-attachments/assets/5a08a0dc-15a5-4a85-a954-34496b7947f7)
+
 - **Basic Task List**: A simpler to-do list view with task creation and completion functionality.
 - **Task Management**: Add, edit, and delete tasks.
 - **Task Completion**: Mark tasks as completed with a checkbox.
